@@ -1,0 +1,10 @@
+[mysql]
+name = "user"
+username = "root"
+password = "root"
+ip = "127.0.0.1"
+port = "3306"
+dbname = "user"
+[redis]
+name = "user"
+addrss = "127.0.0.1:6379"
