@@ -13,8 +13,6 @@ func LoadTomlConfig(path string) {
 	Set(conf)
 }
 
-// var configs map[string]interface{}
-
 func Set(config Config) {
 	conf = config
 }

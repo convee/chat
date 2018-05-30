@@ -2,6 +2,7 @@ package main
 
 import (
 	"chat/conf"
+	"chat/handle/tcp"
 	"fmt"
 )
 
@@ -14,5 +15,5 @@ func main() {
 	}()
 
 	conf.LoadTomlConfig("config.toml")
-
+	tcp.Run()
 }

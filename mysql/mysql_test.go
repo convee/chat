@@ -1,6 +1,7 @@
-package mysql
+package mysql_test
 
 import (
+	"chat/mysql"
 	"testing"
 )
 
@@ -15,7 +16,7 @@ func Test_Test(t *testing.T) {
 
 func Test_Select(t *testing.T) {
 	var test []Test
-	err := New("test").Select(&test, "select * from test")
+	err := mysql.New("test").Select(&test, "select * from test")
 	if err != nil {
 		t.Error(err)
 	} else {
