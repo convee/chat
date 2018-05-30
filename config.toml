@@ -1,10 +1,17 @@
 [mysql]
-name = "user"
+[mysql.user]
 username = "root"
-password = "root"
+password = "123456"
 ip = "127.0.0.1"
 port = "3306"
 dbname = "user"
+[mysql.test]
+username = "root"
+password = "123456"
+ip = "127.0.0.1"
+port = "3306"
+dbname = "test"
+
 [redis]
-name = "user"
+[redis.user]
 addrss = "127.0.0.1:6379"

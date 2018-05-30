@@ -1,11 +1,8 @@
 package main
 
 import (
-	"chat/cache"
 	"chat/conf"
 	"fmt"
-
-	"github.com/garyburd/redigo/redis"
 )
 
 func main() {
@@ -16,9 +13,6 @@ func main() {
 		}
 	}()
 
-	conf.InitConfig("config.toml")
-	cache.InitRedis()
-	name, _ := redis.String(cache.GetRedis().Do("get", "name"))
-	fmt.Println(name)
+	conf.LoadTomlConfig("config.toml")
 
 }

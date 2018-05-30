@@ -4,14 +4,21 @@ import (
 	"github.com/BurntSushi/toml"
 )
 
-var config Config
+var conf Config
 
-func InitConfig(path string) {
-	if _, err := toml.DecodeFile(path, &config); err != nil {
+func LoadTomlConfig(path string) {
+	if _, err := toml.DecodeFile(path, &conf); err != nil {
 		panic(err)
 	}
+	Set(conf)
 }
 
-func GetConfig() Config {
-	return config
+// var configs map[string]interface{}
+
+func Set(config Config) {
+	conf = config
+}
+
+func Get() Config {
+	return conf
 }

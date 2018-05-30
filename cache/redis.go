@@ -8,20 +8,12 @@ import (
 
 var pool *redis.Pool
 
-func InitRedis() {
-	redisConfig := conf.GetConfig().Redis
+func New(name string) (pool *redis.Pool) {
+	redisConfig := conf.Get().Redis[name]
 	pool = &redis.Pool{
 		Dial: func() (redis.Conn, error) {
 			return redis.Dial("tcp", redisConfig.Address)
 		},
 	}
 	return
-}
-
-func GetRedis() redis.Conn {
-	return pool.Get()
-}
-
-func CloseRedis(conn redis.Conn) {
-	conn.Close()
 }
