@@ -1,4 +1,5 @@
-syntax = "proto2"; 
+syntax = "proto2";
+package pb;
 message UserInfo{
     required string message = 1;   //消息
     required int32 length = 2;    //消息大小

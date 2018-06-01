@@ -1,0 +1,16 @@
+syntax = "proto2"; 
+package pb;
+message Message{
+    required string cmd = 1;   //消息类型
+    required string data = 2;    //消息内容
+}
+
+message Login{
+    required string username = 1;
+    required string pwd = 2;
+}
+
+message Register{
+    required string username = 1;
+    required string pwd = 2;
+}
