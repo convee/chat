@@ -2,6 +2,7 @@ package main
 
 import (
 	"chat/conf"
+	"chat/db"
 	"chat/handle/tcp"
 	"fmt"
 )
@@ -15,5 +16,6 @@ func main() {
 	}()
 
 	conf.LoadTomlConfig("config.toml")
+	db.Pool("test")
 	tcp.Run()
 }

@@ -14,9 +14,13 @@ type RedisConfig struct {
 }
 
 type MysqlConfig struct {
-	Username string
-	Password string
-	Ip       string
-	Port     string
-	DbName   string
+	Ip          string
+	Port        string
+	Username    string
+	Password    string
+	Database    string
+	Charset     string
+	MaxIdle     int
+	MaxOpen     int
+	MaxLifetime int
 }

@@ -2,18 +2,26 @@
 address = "127.0.0.1:5004"
 [mysql]
 [mysql.user]
-username = "root"
-password = "123456"
 ip = "127.0.0.1"
 port = "3306"
-dbname = "user"
-[mysql.test]
 username = "root"
 password = "123456"
-ip = "127.0.0.1"
-port = "3306"
-dbname = "test"
+database = "user"
+chartset = "utf8"
+maxIdle = 2
+maxOpen = 500
+maxLifetime = 60
 
+[mysql.test]
+ip = "127.0.0.1"
+port = "3306"
+username = "root"
+password = "123456"
+database = "test"
+chartset = "utf8"
+maxIdle = 2
+maxOpen = 500
+maxLifetime = 60
 [redis]
 [redis.user]
 addrss = "127.0.0.1:6379"
