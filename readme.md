@@ -1,13 +1,13 @@
-# 多用户在线聊天系统
+# Go语言多用户在线聊天系统
 
-### 功能
+## 功能
 * 注册
 * 登录
 * 发消息
 * 获取用户列表
 
-### 工具
-##### protobuf
+## 工具
+### Protobuf数据传输协议
 * 优点：编码速度快、数据体积小、规范统一
 * 缺点：改动协议字段需要重新生成文件、数据没有可读性
 * 安装protoc：
@@ -31,7 +31,7 @@ protoc --go_out=*.proto;
 * test.proto
 ```
 syntax = "proto3";  //指定版本，必须要写（proto3、proto2）  
-package proto;
+package pb;
 enum FOO 
 { 
     X = 0; 

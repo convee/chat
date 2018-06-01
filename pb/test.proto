@@ -1,0 +1,6 @@
+syntax = "proto2"; 
+message UserInfo{
+    required string message = 1;   //消息
+    required int32 length = 2;    //消息大小
+    required int32 cnt = 3;      //消息计数
+}
