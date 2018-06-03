@@ -1,15 +1,13 @@
 package tcp
 
 import (
-	"chat/conf"
 	"fmt"
 	"net"
 )
 
-func Run() (err error) {
+func Run(tcpAddr string) {
 	fmt.Println("tcp server start running..")
-	addr := conf.Get().Tcp.Address
-	l, err := net.Listen("tcp", addr)
+	l, err := net.Listen("tcp", tcpAddr)
 	if err != nil {
 		panic(err)
 	}
@@ -25,3 +23,9 @@ func Run() (err error) {
 func process(conn net.Conn) {
 	defer conn.Close()
 }
+
+func read(conn net.Conn) {
+
+}
+
+func write(conn net.Conn)

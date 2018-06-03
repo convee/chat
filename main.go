@@ -2,9 +2,13 @@ package main
 
 import (
 	"chat/conf"
-	"chat/db"
 	"chat/handle/tcp"
+	"flag"
 	"fmt"
+)
+
+var (
+	tcpAddr = flag.String("tcpAddr", "127.0.0.1:5001", "tcp address")
 )
 
 func main() {
@@ -14,8 +18,7 @@ func main() {
 			fmt.Println(r)
 		}
 	}()
-
+	flag.Parse()
 	conf.LoadTomlConfig("config.toml")
-	db.Pool("test")
-	tcp.Run()
+	tcp.Run(&tcpAddr)
 }

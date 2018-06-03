@@ -1,5 +1,0 @@
-2018/06/01 17:48:47.170816 C:/mygo/src/chat/logger/log.go:35: [DEBUG]debug test
-2018/06/01 17:48:47.170816 C:/mygo/src/chat/logger/log.go:38: [INFO]debug test
-2018/06/01 17:48:47.170816 C:/mygo/src/chat/logger/log.go:41: [NOTICE]debug test
-2018/06/01 17:48:47.170816 C:/mygo/src/chat/logger/log.go:44: [WARN]debug test
-2018/06/01 17:48:47.170816 C:/mygo/src/chat/logger/log.go:47: [ERROR]debug test

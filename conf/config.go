@@ -1,7 +1,6 @@
 package conf
 
 type Config struct {
-	Tcp   TcpConfig
 	Redis map[string]RedisConfig
 	Mysql map[string]MysqlConfig
 }

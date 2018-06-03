@@ -1,5 +1,3 @@
-[tcp]
-address = "127.0.0.1:5004"
 [mysql]
 [mysql.user]
 ip = "127.0.0.1"
